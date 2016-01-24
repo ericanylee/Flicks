@@ -27,7 +27,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZAQ-Lo-Kf1">
-                                                    <rect key="frame" x="8" y="0.0" width="304" height="21"/>
+                                                    <rect key="frame" x="112" y="0.0" width="200" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
@@ -35,19 +35,25 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SVa-YU-HUQ">
-                                                    <rect key="frame" x="8" y="26" width="304" height="60"/>
+                                                    <rect key="frame" x="112" y="26" width="200" height="60"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1GB-I9-wMd">
+                                                    <rect key="frame" x="0.0" y="-8" width="110" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                </imageView>
                                             </subviews>
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
                                             <outlet property="overviewLabel" destination="SVa-YU-HUQ" id="cjU-7Q-stV"/>
+                                            <outlet property="posterView" destination="1GB-I9-wMd" id="teN-qH-2dT"/>
                                             <outlet property="titleLabel" destination="ZAQ-Lo-Kf1" id="tpW-eu-2A5"/>
                                         </connections>
                                     </tableViewCell>

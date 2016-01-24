@@ -12,6 +12,7 @@ class MovieCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var posterView: UIImageView! // can't store it as image view bc it's already an existing label 
     
     override func awakeFromNib() {
         super.awakeFromNib()
