@@ -28,6 +28,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         //being added to the list view
         TableView.insertSubview(refreshControl, atIndex: 0)
 
+        //need to call refresh function first time or else view does not load
         refreshControlAction(refreshControl)
     }
     
@@ -35,8 +36,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     // Updates the tableView with the new data
     // Hides the RefreshControl
     func refreshControlAction(refreshControl: UIRefreshControl) {
-        
-
         
         // ... Create the NSURLRequest (myRequest) ...
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
@@ -57,21 +56,27 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                 if let data = dataOrNil {
                     if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(
                         data, options:[]) as? NSDictionary {
-                            NSLog("response: \(responseDictionary)")
+                           //NSLog("response: \(responseDictionary)") the same as printing it out
                             
                             self.movies = responseDictionary["results"] as! [NSDictionary]
-                           
                             // Reload the tableView now that there is new data
                             self.TableView.reloadData()
                             
                             // Tell the refreshControl to stop spinning
                             refreshControl.endRefreshing()
                             
+                            print("Data is not NIL")
+                            //NSLog("Response: \(responseDictionary)") //printing the retrieved data out
+                            
                     }
+                }
+                else {
+                    print("Data is NIL-  no network connection?")
                 }
                 MBProgressHUD.hideHUDForView(self.view, animated: true)
                 
         })
+        
         
         task.resume()
 
