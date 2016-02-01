@@ -120,7 +120,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                 
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
-        
+        cell.backgroundColor = UIColor(red:0.82, green:0.933, blue:0.988, alpha:1)
+
         //print("row\(indexPath.row)")
         
         return cell
