@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		070DFFDD1C5EFDD000223F6E /* collectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070DFFDC1C5EFDD000223F6E /* collectionViewController.swift */; };
 		070DFFDF1C5EFE8300223F6E /* collectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070DFFDE1C5EFE8300223F6E /* collectionViewCell.swift */; };
+		07360B781C604AAD00C5BB97 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07360B771C604AAC00C5BB97 /* DetailViewController.swift */; };
 		077B04FC1C51D8C700883ABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077B04FB1C51D8C700883ABB /* AppDelegate.swift */; };
 		077B05011C51D8C800883ABB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 077B04FF1C51D8C800883ABB /* Main.storyboard */; };
 		077B05031C51D8C800883ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 077B05021C51D8C800883ABB /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		070DFFDC1C5EFDD000223F6E /* collectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collectionViewController.swift; sourceTree = "<group>"; };
 		070DFFDE1C5EFE8300223F6E /* collectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collectionViewCell.swift; sourceTree = "<group>"; };
+		07360B771C604AAC00C5BB97 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		077B04F81C51D8C700883ABB /* MovieViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		077B04FB1C51D8C700883ABB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		077B05001C51D8C800883ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				070DFFDC1C5EFDD000223F6E /* collectionViewController.swift */,
 				077B050D1C51D9B300883ABB /* MoviesViewController.swift */,
+				07360B771C604AAC00C5BB97 /* DetailViewController.swift */,
 			);
 			name = "view controllers";
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				070DFFDD1C5EFDD000223F6E /* collectionViewController.swift in Sources */,
 				077B04FC1C51D8C700883ABB /* AppDelegate.swift in Sources */,
 				077B050E1C51D9B300883ABB /* MoviesViewController.swift in Sources */,
+				07360B781C604AAD00C5BB97 /* DetailViewController.swift in Sources */,
 				070DFFDF1C5EFE8300223F6E /* collectionViewCell.swift in Sources */,
 				077B05111C55866600883ABB /* MovieCell.swift in Sources */,
 			);

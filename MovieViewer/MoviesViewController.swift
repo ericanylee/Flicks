@@ -64,8 +64,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                             
                             // Tell the refreshControl to stop spinning
                             refreshControl.endRefreshing()
-                            
-                            print("Data is not NIL")
+
                             //NSLog("Response: \(responseDictionary)") //printing the retrieved data out
                             
                     }
@@ -128,14 +127,23 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        let cell = sender as! UITableViewCell
+        let indexPath = TableView.indexPathForCell(cell)
+        let movie = movies![indexPath!.row]
+    
+        //only called when going forward, not backward
+        //if you do option + press detailViewController.. can see its type
+        let detailViewController = segue.destinationViewController as! DetailViewController
+        
+        //remember DetailViewController is the class you defined (can cast it as a type)
+        detailViewController.movie = movie
+        
     }
-    */
+    
 
 }
