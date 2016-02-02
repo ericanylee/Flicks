@@ -64,13 +64,13 @@ Describe any challenges encountered while building the app.
 
 Movie Flicks is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: 3 hours spent in total
+Time spent: 2 hours spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
-- [ ] User can view movie details by tapping on a cell.
+- [x] User can view movie details by tapping on a cell.
 - [ ] User can select from a tab bar for either **Now Playing** or **Top Rated** movies.
 - [ ] Customize the selection effect of the cell.
 
@@ -102,7 +102,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2016] [Erica Lee]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
