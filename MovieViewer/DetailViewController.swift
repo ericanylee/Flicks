@@ -25,7 +25,20 @@ class DetailViewController: UIViewController {
         let overview = movie["overview"] as? String
         overviewLabel.text = overview
         
-        //print(movie)
+        let posterBaseUrl = "http://image.tmdb.org/t/p/w500"
+        
+        //safely get a poster path by using if let
+        if let posterPath = movie["poster_path"] as? String {
+            //if the poster path is not nil, this following will be executed
+            let posterUrl = NSURL(string: posterBaseUrl + posterPath)
+            posterImageView.setImageWithURL(posterUrl!)
+        }
+            
+        else {
+            // No poster image. Can either set to nil (no image) or a default movie poster image
+            // that you include as an asset
+            posterImageView = nil
+        }
     }
 
     override func didReceiveMemoryWarning() {
