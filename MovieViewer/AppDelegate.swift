@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    //did Finish Launching -> Very first function to run when the app opens 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
@@ -22,9 +22,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //story board name is called Main
         
         //get navigation controller to get all the view controllers - had to give storyboard ID
-        let nowPlayingNavigationController = storyboard.instantiateViewControllerWithIdentifier("MoviewNavigationController") as! UINavigationController
+        let nowPlayingNavigationController = storyboard.instantiateViewControllerWithIdentifier("MovieNavigationController") as! UINavigationController
 
         let nowPlayingViewController = nowPlayingNavigationController.topViewController as! MoviesViewController
+        nowPlayingViewController.endpoint = "now_playing"
+        nowPlayingNavigationController.tabBarItem.title = "Now Playing"
+        //nowPlayingNavigationController.tabBarItem.image = UIImage(named: "TopMovie")
+        
+        
+        //get navigation controller to get all the view controllers - had to give storyboard ID
+        let topRatedNavigationController = storyboard.instantiateViewControllerWithIdentifier("MovieNavigationController") as! UINavigationController
+        
+        let topRatedViewController = topRatedNavigationController.topViewController as! MoviesViewController
+        topRatedViewController.endpoint = "top_rated"
+        topRatedNavigationController.tabBarItem.title = "Top Rated"
+        
+        let tabBarController = UITabBarController()
+        //pass in an array of view controllers that you want to use
+        tabBarController.viewControllers = [nowPlayingNavigationController, topRatedNavigationController]
+        
+        window?.rootViewController = tabBarController
+        window?.makeKeyAndVisible()
         
         return true
     }
