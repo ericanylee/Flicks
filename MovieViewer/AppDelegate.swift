@@ -15,7 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //story board name is called Main
+        
+        //get navigation controller to get all the view controllers - had to give storyboard ID
+        let nowPlayingNavigationController = storyboard.instantiateViewControllerWithIdentifier("MoviewNavigationController") as! UINavigationController
+
+        let nowPlayingViewController = nowPlayingNavigationController.topViewController as! MoviesViewController
+        
         return true
     }
 
