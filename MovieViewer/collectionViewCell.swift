@@ -11,5 +11,5 @@ import UIKit
 class collectionViewCell: UICollectionViewCell {
 
     
-    @IBOutlet weak var posterImage: UIImageView!
+    @IBOutlet weak var PosterCell: UIImageView!
 }
