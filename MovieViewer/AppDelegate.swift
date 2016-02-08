@@ -23,8 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //get navigation controller to get all the view controllers - had to give storyboard ID
         let nowPlayingNavigationController = storyboard.instantiateViewControllerWithIdentifier("MovieNavigationController") as! UINavigationController
+        nowPlayingNavigationController.navigationBar.barStyle = UIBarStyle.Black
+        nowPlayingNavigationController.navigationBar.tintColor = UIColor.yellowColor()
+        nowPlayingNavigationController.title = "Now Playing"
 
-        let nowPlayingViewController = nowPlayingNavigationController.topViewController as! MoviesViewController
+        let nowPlayingViewController = nowPlayingNavigationController.topViewController as! collectionViewController
         nowPlayingViewController.endpoint = "now_playing"
         nowPlayingNavigationController.tabBarItem.title = "Now Playing"
         //nowPlayingNavigationController.tabBarItem.image = UIImage(named: "TopMovie")
@@ -33,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //get navigation controller to get all the view controllers - had to give storyboard ID
         let topRatedNavigationController = storyboard.instantiateViewControllerWithIdentifier("MovieNavigationController") as! UINavigationController
         
-        let topRatedViewController = topRatedNavigationController.topViewController as! MoviesViewController
+        let topRatedViewController = topRatedNavigationController.topViewController as! collectionViewController
         topRatedViewController.endpoint = "top_rated"
         topRatedNavigationController.tabBarItem.title = "Top Rated"
         
@@ -41,6 +44,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //pass in an array of view controllers that you want to use
         tabBarController.viewControllers = [nowPlayingNavigationController, topRatedNavigationController]
         
+        tabBarController.tabBar.barTintColor = UIColor.blackColor()
+        tabBarController.tabBar.tintColor = UIColor.yellowColor()
+
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         

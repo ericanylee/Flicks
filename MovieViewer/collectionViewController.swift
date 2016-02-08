@@ -20,10 +20,12 @@ UICollectionViewDataSource{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         CollectionView.dataSource = self
         CollectionView.delegate = self
-        
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.BlackOpaque
+        self.navigationController?.navigationBar.tintColor = UIColor.yellowColor()
+
         //initializing UIRefreshControl
         let refreshControl = UIRefreshControl()
         
@@ -68,7 +70,7 @@ UICollectionViewDataSource{
                             // Tell the refreshControl to stop spinning
                             refreshControl.endRefreshing()
                             
-                            //NSLog("Response: \(responseDictionary)") //printing the retrieved data out
+                           // NSLog("Response: \(responseDictionary)") //printing the retrieved data out
                             
                     }
                 }
@@ -92,15 +94,15 @@ UICollectionViewDataSource{
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
         func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     
-            if let moview = movies{
-                return movies!.count
+            if let movies = movies{
+                return movies.count
             } else{
                 return 0
             }
         }
         
         func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-            let cell = CollectionView.dequeueReusableCellWithReuseIdentifier("CollectionCell", forIndexPath: indexPath) as! collectionViewCell
+            let cell = CollectionView.dequeueReusableCellWithReuseIdentifier("collectionCell", forIndexPath: indexPath) as! collectionViewCell
             
             let movie = movies![indexPath.row]
             let title = movie["title"] as! String
@@ -144,7 +146,7 @@ override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let cell = sender as! UICollectionViewCell
         let indexPath = CollectionView.indexPathForCell(cell)
         let movie = movies![indexPath!.row]
-    
+        
         //only called when going forward, not backward
         //if you do option + press detailViewController.. can see its type
         let detailViewController = segue.destinationViewController as! DetailViewController
