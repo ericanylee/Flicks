@@ -64,7 +64,7 @@ Describe any challenges encountered while building the app.
 
 Movie Flicks is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: 2 hours spent in total
+Time spent: 7 hours spent in total
 
 ## User Stories
 
